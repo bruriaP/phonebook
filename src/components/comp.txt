@@ -1,0 +1,12 @@
+import react ,{component} fro 'react';
+class counter extends component{
+
+    render(){
+        retrun(
+            <div>
+            counter work
+            </div>
+        )
+    }
+}
+export default counter;        

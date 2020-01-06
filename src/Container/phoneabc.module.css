@@ -1,0 +1,124 @@
+/* .Page {
+	margin-top: 20px;
+}
+
+.Pageaside {
+	float: right;
+	width: 200px;
+}
+
+.Pagesection {
+	text-align: justify;
+}
+
+.widthside {
+	margin-right: 220px;
+}
+
+.Pageafter {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.Pageasideul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #CDCDCD;
+}
+
+.Page aside ul li:first-child a {
+	border-top: 0;
+}
+
+.Page aside ul li a {
+	background: #f1f1f1;
+	color: #008475;
+	font-size: smaller;
+	font-weight: bold;
+	padding: 5px;
+	border-top: 1px solid #CDCDCD;
+	display: block;
+}
+
+.Page aside ul ul {
+	
+	border: 0;
+}
+
+.Page aside ul ul li a {
+	font-weight: normal;
+	border-right: 2px solid #008475;
+	background: #fff;
+}
+
+.Page aside ul li .on {
+	background: #008475;
+	color: #FFF;
+}
+
+.Page aside ul li ul li .on {
+	background: #e1e9f4;
+	color: #000;
+}
+
+.Page aside .father li:first-child a {
+	background: #038576;
+	color: #FFF;
+}
+
+.tbl {
+	border-left: 1px solid #cdcdcd;
+	border-top: 1px solid #cdcdcd;
+	width: 100%;
+}
+
+.tbl thead td {
+	background: #008475;
+	text-align: right;
+	color: #fff;
+	vertical-align: top;
+	border-right: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
+} */
+
+* .tbl tbody td {
+	border-right: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
+}
+
+.tbl tbody tr:hover td {
+	background: #f4f6d7;
+} */
+
+.pagesdivision {
+	background: #f1f1f1;
+	margin-bottom: 20px;
+}
+
+ .pagesdivision a {
+	display: inline-block;
+	padding: 10px;
+	background: #f1f1f1;
+	color: #333;
+}
+
+.pagesdivision a:hover {
+	background: rgba(0,0,0,0.1);
+} */
+
+.pagesdivisioncurr {
+	background: #008475;
+	color: #FFF;
+	font-weight: bold;
+}
+
+/* .pagesdivision .curr:hover {
+	background: #008475;
+} */
+
+.search {
+	text-align: center;
+	margin-bottom: 20px;
+}
