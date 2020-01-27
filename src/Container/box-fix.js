@@ -9,7 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { red, green } from '@material-ui/core/colors';
 
 // We can inject some CSS into the DOM.
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     border: 0,
@@ -35,7 +35,9 @@ const useStyles = makeStyles({
     color: '#FFF',
     fontweight: 'bold',
     // display: 'inline-block',
-    padding: 10,
+    // padding: 10,
+    padding: theme.spacing(2),
+    textAlign: 'center'
     // color: '#333',
     //  background:'rgba(0, 0, 0, .1)',
   },
@@ -48,9 +50,10 @@ const useStyles = makeStyles({
     margin: 'auto',
     width: '50%',
   }
-});
+}));
 export default function FixedContainer() {
   const classes = useStyles();
+  // const [spacing, setSpacing] = React.useState(2);
   // const styles = {
   //   root: {
   //     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -76,42 +79,42 @@ export default function FixedContainer() {
     <React.Fragment>
       <CssBaseline />
       <Container fixed>
-      <div className={classes.pagesdivision}>
+      <div className={classes.pagesdivision} >
         
-							<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=א">א</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ב">ב</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ג">ג</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ד">ד</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ה">ה</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ו">ו</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ז">ז</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ח">ח</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ט">ט</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=י">י</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=כ">כ</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ל">ל</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=מ">מ</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=נ">נ</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ס">ס</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ע">ע</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=פ">פ</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=צ">צ</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ק">ק</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ר">ר</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ש">ש</a>
-								<a className={classes.pagesdivisioncurr} href="./phonesbook/?letter=ת">ת</a>
+							<a className={classes.pagesdivisioncurr} href="./data/?name=א">א </a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ב">ב</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ג">ג</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ד">ד</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ה">ה</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ו">ו</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ז">ז</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ח">ח</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ט">ט</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=י">י</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=כ">כ</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ל">ל</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=מ">מ</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=נ">נ</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ס">ס</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ע">ע</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=פ">פ</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=צ">צ</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ק">ק</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ר">ר</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ש">ש</a>
+								<a className={classes.pagesdivisioncurr} href="./data/?name=ת">ת</a>
                 {/* <input type="hidden" name="act" value="phonesbook" />
 			        	<input name="search" value="" />
 				        <input type="submit" value="חפש" /> */}
 						</div>
         {/* <Typography component="p" style={{ backgroundColor: '#cfe8fc', height: '10vh' }} /> */}
       </Container>
-                <div className={classes.search}>
+                {/* <div className={classes.search}>
             
                 <input type="hidden" name="act" value="phonesbook" />
 			        	<input  name="search" value="" />
 				        <input  type="submit" value="חפש" />
-                </div>
+                </div> */}
                 
     </React.Fragment>
   );

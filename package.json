@@ -25,6 +25,7 @@
         "redux": "^4.0.4",
         "redux-thunk": "^2.3.0",
         "saslprep": "^1.0.3",
+        "write-json-file": "^4.2.1",
         "yup": "^0.27.0"
     },
     "scripts": {

@@ -23,12 +23,29 @@ const useStyles = makeStyles(theme => ({
     container: {
       display: 'flex',
       flexWrap: 'wrap',
+      
     },
     textField: {
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
       width: 200,
+     
     },
+    card: {
+      minWidth: 275,
+    },
+    bullet: {
+      display: 'inline-block',
+      margin: '0 2px',
+      transform: 'scale(0.8)',
+    },
+    title: {
+      fontSize: 14,
+    },
+    pos: {
+      marginBottom: 12,
+    },
+    
   }));
   
   
@@ -49,33 +66,41 @@ const LoginUser = porps => {
 
       const handleChange = prop => event => {
         setValues({ ...values, [prop]: event.target.value });
+       
       };
     
       const handleClickShowPassword = () => {
         setValues({ ...values, showPassword: !values.showPassword });
+        
       };
-    
+
+      const handleClicksubmit = () => {
+        alert('Passwort Was Clicked!');
+        
+      };
+      
       const handleMouseDownPassword = event => {
         event.preventDefault();
       };
 
       const [name, setName] = React.useState('Composed TextField');
-
+      const classes1 = useStyles();
     return (
-        <Container maxWidth="xs" className={classes.loginContainer}>
+        // <Container maxWidth="xs" className={classes.loginContainer}>
           
-            <Card>
-                <CardContent>
+            <Card className={classes1.card} variant="outlined" >
+                <CardContent >
+                  
                     <TextField
                         id="standard-basic"
-                        className={classes.textField}
-                        label="Username"
+                        className={classes1.textField}
+                        label="שם משתמש"
                         margin="normal"
                     />
-                    <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                    <InputLabel htmlFor="standard-adornment-password">סיסמא</InputLabel>
           <Input
             id="standard-adornment-password"
-            classname ={classes.inputl}
+            className={classes1.textField}
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
             onChange={handleChange('password')}
@@ -95,13 +120,14 @@ const LoginUser = porps => {
 
                 </CardContent>
                 <CardAction>
-                    <Button variant="contained" color="primary" className={classes.buttonl}>
+                    <Button variant="contained" color="primary" className={classes.buttonl} >
                     {/* <Button  className={classes.buttonl}>   */}
+                    {/* onClick {handleClicksubmit} */}
                         כניסה
                     </Button>
                 </CardAction>
             </Card>
-        </Container>
+        // </Container>
     );
 };
 
