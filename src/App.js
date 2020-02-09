@@ -2,12 +2,12 @@ import React from "react";
 import classes from "./App.module.css";
 // import counter1 from './components/counter';
 // import Login from './comNotINuse/LoginNew';
-import LongMenu from "./components/menu";
+// import LongMenu from "./components/menu";
 // import MaterialTableDemo from './comNotINuse/phonetbl';
-import MaterialTableDemo1 from "./components/phonelist1";
-import Container from "@material-ui/core/Container";
+// import MaterialTableDemo1 from "./components/phonelist1";
+// import Container from "@material-ui/core/Container";
 // import { TitleComponent } from './comNotINuse/titlecommponent';
-import Grid from "@material-ui/core/Grid";
+// import Grid from "@material-ui/core/Grid";
 
 // import LayoutTitleTextFields from './components/phonetitle';
 // import NestedGrid from "./combkp/NestedGrid";
@@ -16,7 +16,23 @@ import Grid from "@material-ui/core/Grid";
 // import MaterialTableDemo from './components/phonetbl';
 // import getInitialStat from './combkp/phonebook_entry';
 import LoginUser from "./components/LoginUser";
-import FixedContainer from "./Container/box-fix";
+// import FixedContainer from "./Container/box-fix";
+import LangForm from './components/selEngHeb';
+// import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+import {Route, Switch } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Nav from './components/Nav';
+import About from './components/About';
+import MaterialTableDemo1 from "./components/phonelist1";
+import FixedContainer from "./Container/Search-Abc";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import HomeIcon  from './components/svgIcon';
+import phoneOne from './components/PhoneRecived';
+
+// import Header from './components/logo';
+// import Header from './components/logoPhone';
+
 // import test from './components/test';
 // import NonIdiomaticList from './components/listArray';
 
@@ -27,29 +43,29 @@ function App() {
   const Displaylink = () => {
     console.log("Hello link");
   };
-
+  
+  
+  
   return (
     <div className={classes.App}>
-      {/* <h1>ספר טלפונים  ארגוני </h1> */}
-      <LongMenu className={classes.menu} />
         <Container maxWidth="lg" className={classes.container}>
-      <h1>ספר טלפונים ארגוני </h1>
-        <Grid container direction="column"  alignItems="center">
-          {/* <TitleComponent title="Phone Book!" /> */}
-          {/* <Login message="Login" showMessage={displayMessage} ShowLink={Displaylink}/> */}
-          <Grid item lg>
-            <LoginUser></LoginUser>
-          </Grid>
-          <Grid item lg style={{paddingTop:'2rem', paddingBottom:'2rem'}}>
-            <FixedContainer></FixedContainer>
-            </Grid>
-            <Grid item lg>
-          <MaterialTableDemo1></MaterialTableDemo1> 
-          </Grid>
-        </Grid>
-      </Container>
+       
+        {/* <FixedContainer/> */}
+      <Nav />
+      <Grid container direction="column"  alignItems="center" />
+        <Switch>
+        <Route  path='/Home' exact  component={HomeIcon}/>
+        <Route  path='/login' exact  component={LoginUser}/>
+        <Route  path='/PhoneList' exact component={MaterialTableDemo1}/>
+        <Route  path='/Phone' exact  component={phoneOne}/>
+        <Route  path='/about' exact  component={About}/>
+        </Switch>
+        
+        </Container>
     </div>
   );
 }
+
+
 
 export default App;

@@ -18,6 +18,8 @@ import FormControl from '@material-ui/core/FormControl';
 // import TextField from '@material-ui/core/TextField';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Grid from "@material-ui/core/Grid";
+
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -48,13 +50,7 @@ const useStyles = makeStyles(theme => ({
     
   }));
   
-  
-  
-
-  
-
-
-const LoginUser = porps => {
+  const LoginUser = porps => {
 
     const [values, setValues] = React.useState({
         amount: '',
@@ -62,7 +58,10 @@ const LoginUser = porps => {
         weight: '',
         weightRange: '',
         showPassword: false,
+      
       });
+      
+    //   this.handleClicksubmit = this.handleClicksubmit.bind(this.passwords);
 
       const handleChange = prop => event => {
         setValues({ ...values, [prop]: event.target.value });
@@ -74,10 +73,13 @@ const LoginUser = porps => {
         
       };
 
-      const handleClicksubmit = () => {
+      const handleClicksubmit = (props) => {
         alert('Passwort Was Clicked!');
         
       };
+
+    //   this.handleChange = this.handleChange.bind(this);
+    
       
       const handleMouseDownPassword = event => {
         event.preventDefault();
@@ -87,7 +89,7 @@ const LoginUser = porps => {
       const classes1 = useStyles();
     return (
         // <Container maxWidth="xs" className={classes.loginContainer}>
-          
+        <Grid container direction="column"  alignItems="center">
             <Card className={classes1.card} variant="outlined" >
                 <CardContent >
                   
@@ -97,6 +99,7 @@ const LoginUser = porps => {
                         label="שם משתמש"
                         margin="normal"
                     />
+                    
                     <InputLabel htmlFor="standard-adornment-password">סיסמא</InputLabel>
           <Input
             id="standard-adornment-password"
@@ -120,13 +123,17 @@ const LoginUser = porps => {
 
                 </CardContent>
                 <CardAction>
-                    <Button variant="contained" color="primary" className={classes.buttonl} >
-                    {/* <Button  className={classes.buttonl}>   */}
-                    {/* onClick {handleClicksubmit} */}
+                    
+                 <Button variant="contained" color="primary" className={classes.buttonl}   
+                     onClick ={handleClicksubmit}> 
+                        
+                    
+                      
                         כניסה
                     </Button>
                 </CardAction>
             </Card>
+            </Grid>
         // </Container>
     );
 };

@@ -1,0 +1,11 @@
+import React from 'react';
+import '../App.module.css'
+function About(){
+    return(
+        <div>
+            <h2>About Page</h2>
+           
+        </div>
+    )
+};
+export default About;

@@ -1,0 +1,41 @@
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    min-height: 5vh;
+    background: rgb(95, 103, 107);
+    color: white;
+    font-size:x-large ;
+    /* padding-right: 2.5rem; */
+
+    
+}
+
+.navLinks{
+    width: 40%;
+     display:flex;
+     justify-content: space-around;
+     align-items: center;
+     list-style: none;
+     
+}
+
+a:active, a:hover {
+    color: white;
+}
+
+a {
+    color: yellow;
+}
+
+.Logo {
+  /* image-rendering: url(../Img/phonebook.jpg); */
+  width: 100px;
+  height:100px;
+  position: absolute;; 
+      top: 0;
+      left: 0;
+      /* width: 100%
+      height: auto */
+     
+  }

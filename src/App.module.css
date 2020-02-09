@@ -14,8 +14,10 @@
 
   width: 100%;
   max-width: var(--container-width);   */
-  background-color: #34a38b;
-min-height: 100vh;
+  /* background-color: #5d6979; */
+  min-height: 100vh;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: inherit;
 
 }
 .App-logo {
@@ -39,12 +41,15 @@ min-height: 100vh;
    color: #09d3ac;
 }
 h1{
+    /* background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%); */
+    /* box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3); */
    text-align: center;
    color: #dae5e7;
+   font-size: x-large;
    padding: 30px;
    /* font-size: calc(10px + 2vmin); */
    /* position: relative; */
-   background-color:#008475;
+   background-color:#9fb6b3;
    /* left:10px; */
    /* justify-content: center; */
    /* align-items: center; */

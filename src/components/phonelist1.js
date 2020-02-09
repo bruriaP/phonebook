@@ -4,6 +4,10 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 // import phonebooklist from './data.json'
 import data from "./data.json"; 
+// import {letter} from '../Container/Search-Abc';
+import LangForm from '../components/selEngHeb';
+import Grid from "@material-ui/core/Grid";
+
 // import Alert from '@material-ui/lab/Alert';
   // import NonIdiomaticList from './listArray';
 
@@ -15,22 +19,24 @@ const StyledTableCell = withStyles(theme => ({
     backgroundColor: theme.palette.common.black,
     color: theme.palette.common.white,
     background: '#008475',
-		color: '#fff',
-	  verticalalign: 'top',
-	  borderright: '1px solid #cdcdcd',
-	  borderbottom: '1px solid #cdcdcd',
+	color: '#fff',
+	verticalalign: 'top',
+	borderright: '1px solid #cdcdcd',
+	borderbottom: '1px solid #cdcdcd',
   },
   body: {
     fontSize: 14,
     background: '#f1f1f1',
-	  padding: '1rem',
-	  border: '1px solid #ddd',
-	  marginbottom: '1.5rem',
+	padding: '1rem',
+	border: '1px solid #ddd',
+	marginbottom: '1.5rem',
   },
 }))(TableCell);
 
 
 export default function MaterialTableDemo() {
+    // <AbcContainer />
+
   const [state, setState] = React.useState({
     columns: [
       { title: 'שם פרטי', field: 'name'  },
@@ -60,17 +66,23 @@ export default function MaterialTableDemo() {
     //   { id: 5, name: 'טל', surname: 'כהן', isMarried: false, birthDate: new Date(1987, 1, 1), birthCity: 34, sex: 2, type: 'child', insertDateTime: new Date(2018, 1, 1, 12, 23, 44), time: new Date(1900, 1, 1, 14, 23, 35) },
     //   { id: 6, name: 'רות', surname: 'זלצמן', isMarried: true, birthDate: new Date(1989, 1, 1), birthCity: 34, sex: 2, type: 'child', insertDateTime: new Date(2018, 1, 1, 12, 23, 44), time: new Date(1900, 1, 1, 14, 23, 35), parentId: 5 },
     // ],
-    data:dataList 
+    data:dataList
     
   });
   
-  // console.log(this.props.data);
+//   console.log(this.props.data);
   function handleSubmit(event) {
     event.preventDefault();
   }
   return (
-    
-    <MaterialTable
+      <div>
+          {/* <button>choose</button> */}
+     {/* <AbcContainer /> */}
+     <Grid  item lg container direction="row" alignItems="flex">
+              <LangForm />
+                
+            </Grid>
+    <MaterialTable 
     classname = {StyledTableCell.body}
       title="ספר טלפונים"
       columns={state.columns}
@@ -119,7 +131,7 @@ export default function MaterialTableDemo() {
           }),
       }}
     />
-    
+    </div>
   );
   
   
